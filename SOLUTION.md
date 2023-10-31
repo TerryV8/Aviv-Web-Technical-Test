@@ -165,19 +165,25 @@ Handling an application with hundreds of thousands of listings, millions of pric
 8.  Security:
     Secure your APIs with proper authentication and authorization, use IAM for secure service interactions, and ensure data encryption in transit and at rest with HTTPS and AWS KMS.
 
-9.  Disaster Recovery and Redundancy:
+9.  Given the large number of users, implementing an authentication system would be highly beneficial. We can consider using either the Google API or Amazon Cognito.
+
+10. Disaster Recovery and Redundancy:
     Have a robust backup and recovery plan, and design for high availability with redundant systems.
 
-10. Scalable Hosting and Infrastructure:
+11. Scalable Hosting and Infrastructure:
     Leverage AWS and serverless architectures to ensure scalable and efficient hosting, dynamically allocating resources in response to traffic demands. This methodology significantly cuts down on maintenance needs and boosts operational efficiency, with AWS Lambda providing robust serverless computing capabilities.
 
-11. User Experience and Accessibility:
+12. User Experience and Accessibility:
     Optimize user flows for performance, particularly in listing and price retrieval, and utilize tools like Google PageSpeed Insights for performance scoring and SEO.
 
-12. Architectural Benchmarking:
+13. Architectural Benchmarking:
     Perform benchmark assessments by executing load testing to prepare for peak usage, and uphold stringent quality assurance practices. Ensure these processes occur on a development server that serves as an exact replica of the production environment, maintaining consistent characteristics across both environments.
 
-13. Cost Management:
+14. Cost Management:
     Regularly monitor and optimize infrastructure costs, striving for resource efficiency and cost-effectiveness. Stay updated on new technological advancements and features through continuous technology watch practices.
+
+15. Allow me to present the architecture I recommend and will be implementing on the AWS cloud provider:
+
+![AWS Architecture for millions users](/Aviv_Technical_Test_Architecture%20vThierryVO%202023%2010%2031.png)
 
 By addressing these areas, you should be able to build and maintain a robust and scalable application capable of handling hundreds of thousands of listings, millions of prices, and millions of users every month.
