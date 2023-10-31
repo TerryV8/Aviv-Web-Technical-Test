@@ -90,6 +90,25 @@ export function getRepository(postgres: PostgresClient) {
       return tableRowToListing(listing);
     },
 
+    async getListingPrices(listingId: number) {
+      const queryString = `SELECT * FROM listing WHERE id = $1`;
+      const queryValues = [listingId];
+
+      const result = await postgres.query(queryString, queryValues);
+      
+      const listing = result.rows[0];
+
+      if (!listing) {
+        throw new EntityNotFound(
+          `Could not find listing with id: ${listingId}`
+        );
+      }
+
+      return result.rows
+
+      // return tableRowToListing(listing);
+    },
+    
     async insertListing(listing: ListingWrite) {
       const tableRow = listingToTableRow(listing, new Date());
 
