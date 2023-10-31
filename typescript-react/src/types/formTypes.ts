@@ -10,10 +10,10 @@ export type FormData = {
   postal_address: PostalAddress;
   description: string;
   building_type: 'STUDIO' | 'APARTMENT' | 'HOUSE';
-  latest_price_eur: number;
-  surface_area_m2: number;
-  rooms_count: number;
-  bedrooms_count: number;
+  latest_price_eur: number | '';
+  surface_area_m2: number | '';
+  rooms_count: number | '';
+  bedrooms_count: number | '';
   contact_phone_number: string;
 };
 
