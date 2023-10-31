@@ -7,8 +7,10 @@ export const validateListingForm = (formData: FormData) => {
     validationErrors.name = 'Name is required';
 
   if (
+    String(formData.latest_price_eur) === '' ||
     formData.latest_price_eur === null ||
     formData.latest_price_eur === undefined ||
+    typeof Number(formData.latest_price_eur) !== 'number' ||
     isNaN(formData.latest_price_eur) ||
     formData.latest_price_eur < 0
   )
@@ -16,8 +18,10 @@ export const validateListingForm = (formData: FormData) => {
       'Price must be equal to or greater than 0';
 
   if (
+    String(formData.surface_area_m2) === '' ||
     formData.surface_area_m2 === null ||
     formData.surface_area_m2 === undefined ||
+    typeof Number(formData.surface_area_m2) !== 'number' ||
     isNaN(formData.surface_area_m2) ||
     formData.surface_area_m2 < 0
   )
@@ -25,8 +29,10 @@ export const validateListingForm = (formData: FormData) => {
       'Surface area must be equal to or greater than 0';
 
   if (
+    String(formData.rooms_count) === '' ||
     formData.rooms_count === null ||
     formData.rooms_count === undefined ||
+    typeof Number(formData.rooms_count) !== 'number' ||
     isNaN(formData.rooms_count) ||
     formData.rooms_count < 1
   )
@@ -34,8 +40,11 @@ export const validateListingForm = (formData: FormData) => {
       'Number of rooms must be equal to or greater than 1';
 
   if (
+    String(formData.bedrooms_count) === '' ||
     formData.bedrooms_count === null ||
     formData.bedrooms_count === undefined ||
+    typeof Number(formData.bedrooms_count) !== 'number' ||
+    isNaN(formData.bedrooms_count) ||
     formData.bedrooms_count < 0
   )
     validationErrors.bedrooms_count =
