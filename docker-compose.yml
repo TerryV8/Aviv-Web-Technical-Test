@@ -6,7 +6,7 @@ services:
     build:
       context: python-flask
     labels:
-      - aviv-technical-test
+      project: "avivtechnicaltest"
     user: "listingapi:listingapi"
     volumes:
       - ./python-flask:/home/listingapi/app:rw
@@ -16,7 +16,7 @@ services:
         "db:5432",
         "--",
         "python",
-        "app.py"
+        "app.py",
       ]
     ports:
       - "8080:8080"
@@ -35,7 +35,7 @@ services:
         USER_ID: ${USER_ID:-1000}
         GROUP_ID: ${GROUP_ID:-1000}
     labels:
-      - aviv-technical-test
+      project: "avivtechnicaltest"
     user: "${USER_ID:-1000}:${GROUP_ID:-1000}"
     volumes:
       - ./typescript-serverless:/home/listingapi/app:rw
@@ -55,7 +55,7 @@ services:
   dotnet:
     build: c#-dotnet
     labels:
-      - aviv-technical-test
+      project: "avivtechnicaltest"
     ports:
       - 8686:80
     depends_on:
@@ -64,7 +64,7 @@ services:
   db:
     image: "mdillon/postgis:11-alpine"
     labels:
-      - aviv-technical-test
+      project: "avivtechnicaltest"
     volumes:
       - type: volume
         source: pg-data

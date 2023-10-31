@@ -1,0 +1,61 @@
+@use '@styles/variables' as *;
+
+.listing-pagination {
+  padding: $space-s;
+
+  @media screen and (min-width: $min-screen-s) {
+    padding: $space-m;
+  }
+
+  &__title {
+    width: 100%;
+    font-size: $font-xl;
+    text-align: center;
+
+    @media screen and (min-width: $min-screen-l) {
+      margin: 0 20vw $space-l;
+      width: 60vw;
+    }
+  }
+
+  &__sub-title {
+    margin-top: 0;
+    margin-bottom: $space-m;
+  }
+
+  &__content {
+    display: 'flex';
+    flex-direction: 'column';
+    align-items: 'center';
+  }
+
+  &__button-previous,
+  &__button-next {
+    margin: 6px;
+    padding: 6px;
+    background-color: #04aa6d;
+    color: white;
+    font-weight: bold;
+
+    &.inactive {
+      opacity: 0.1;
+    }
+
+    &.active {
+      opacity: 1;
+    }
+  }
+
+  &__page-index {
+    margin: 6px;
+    padding: 6px;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    min-width: 35px;
+    &.active {
+      background-color: rgb(80, 9, 220);
+      color: white;
+    }
+  }
+}
