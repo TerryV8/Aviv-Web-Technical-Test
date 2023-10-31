@@ -1,0 +1,91 @@
+@use '@styles/variables' as *;
+
+.input-field {
+  &__input-label {
+    font-weight: 500;
+  }
+
+  &__input-group {
+    display: inline-block;
+    margin-top: 3px;
+  }
+
+  &__input-text {
+    display: inline-block;
+    width: 100%;
+    padding: $space-s;
+    font-family: Arial;
+    font-size: 15px;
+  }
+  &__input-number-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3px;
+  }
+
+  &__input-number-label-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3px;
+  }
+
+  &__input-measure-unit {
+    padding-left: 5px;
+    width: 25px;
+  }
+
+  &__input-number-counter-group {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    min-width: 150px;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  &__input-number-button-minus {
+    border-radius: 50%;
+    height: 27px;
+    margin-right: 10px;
+  }
+
+  &__input-number-button-plus {
+    border-radius: 50%;
+    height: 27px;
+    margin-left: 5px;
+  }
+
+  &__input-number-text {
+    display: inline-block;
+    width: 50px;
+    padding: 5px;
+    font-family: Arial;
+    font-size: 14px;
+
+    // Remove spinner for Webkit browsers
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    // Remove spinner for Firefox
+    -moz-appearance: textfield;
+  }
+
+  &__input-number-text-exception-price {
+    display: inline-block;
+    width: 85px;
+    padding: 5px;
+    font-family: Arial;
+    font-size: 14px;
+  }
+
+  &__error {
+    color: red;
+  }
+}

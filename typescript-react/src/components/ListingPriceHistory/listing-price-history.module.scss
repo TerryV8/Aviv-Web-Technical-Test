@@ -1,0 +1,78 @@
+@use '@styles/variables' as *;
+
+.listing-price-history {
+  padding: $space-s;
+
+  @media screen and (min-width: $min-screen-s) {
+    padding: $space-m;
+  }
+
+  &__title {
+    width: 100%;
+    font-size: $font-xl;
+    text-align: center;
+
+    @media screen and (min-width: $min-screen-l) {
+      margin: 0 20vw $space-l;
+      width: 60vw;
+    }
+  }
+
+  &__sub-title {
+    margin-top: 0;
+    margin-bottom: $space-m;
+  }
+
+  &__content {
+    display: 'flex';
+    flex-direction: 'column';
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  &__error-message {
+    padding: 16px;
+    border: 1px solid #f8d7da;
+    background-color: #f8d7da;
+    color: #721c24;
+    border-radius: 4px;
+    margin: 50px 50px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+
+  &__error-icon {
+    margin-right: 10px;
+  }
+
+  &__loading-message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #555;
+  }
+
+  &__loading-spinner {
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top: 4px solid #333;
+    width: 40px;
+    height: 40px;
+    animation: spin 2s linear infinite;
+    margin-right: 10px;
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}
