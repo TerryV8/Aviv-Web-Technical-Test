@@ -5,7 +5,38 @@ be achieved with your implementation.
 
 ## Notes
 
-Write here notes about your implementation choices and assumptions.
+##### Write here notes about your implementation choices and assumptions.
+
+Considering my candidacy for the React-based Front End Developer position, I would be glad to provide an insightful walkthrough of the methodologies I have applied and the key implementations I’ve carried out for this project:
+
+- Overall Implementation:
+  CSS Customization: I extended the existing CSS, following the BEM (Block Element Modifier) methodology, to ensure consistency and maintainability in styling.
+  Security Measures: For added security, I externalized the API URL and other sensitive information into a separate file, away from the main codebase.
+  Routing: I implemented the routing as specified in the requirements, ensuring that all pages are accessible through defined routes.
+  Default Routing and display: I added a default display page to handle cases where a user requests a route that hasn’t been defined, enhancing the user experience.
+  TypeScript Interfaces: I employed TypeScript interfaces as an additional layer in React to catch errors at compile time rather than runtime, resulting in more robust code.
+
+- Add Listing Section on Main Listings Page:
+  Form Implementation: I created a form that accurately validates user input, distinguishing between text and number inputs, and processing them accordingly.
+  Number Fields: I added ‘+’ and ‘-‘ buttons for number fields to facilitate easy increment and decrement operations, and provided placeholders to guide user input.
+  Input Validation: I secured the input fields by implementing validation checks.
+  Country List: I utilized a popular library to fetch and display an extensive list of countries, ensuring a global reach and enhancing user experience.
+  Phone Number Formatting: I used another widely-recognized library to implement automatic phone number formatting based on the selected country, which enhances data consistency and improves user experience.
+  Price Input: I formatted the price input to include a space every three digits for better readability, aligning with the Euro currency format.
+  Type Definitions: For clarity and better code organization, I placed all type definitions in a separate file.
+  Response Handling: I meticulously implemented logic to ensure that appropriate actions are taken based on the various response status codes received from API calls. For successful responses (200 and 201), I processed and displayed the data as required. For client-side errors (400), I provided user-friendly error messages, guiding users to correct their input. Unprocessable entities (422) triggered validation error messages, ensuring data integrity. Server-side errors (500) resulted in a generic error message, informing the user while maintaining system stability.
+  Nested Attribute Interaction: I successfully interacted with data that had nested attribute objects.
+
+- Listings Section on Main Listings Page:
+  Data Retrieval: I implemented functions to fetch all necessary data, ensuring it is correctly retrieved and displayed.
+  Data Formatting: I maintained consistency in data presentation throughout the application, formatting numerical data such as prices for easy readability.
+  Pagination: I introduced pagination to enhance user navigation and application performance. Logic was implemented to disable the ‘previous’ button on the first page and the ‘next’ button on the last page to avoid navigation errors. Acknowledging that the backend’s pagination capabilities has not been implemented yet, I took the initiative to implement a frontend-driven pagination system. This approach allows us to simulate the intended user experience and assess the performance benefits, providing valuable insights for future backend integration. The primary motivation behind introducing pagination was to optimize the application’s performance, particularly crucial when handling large datasets and images. By loading only a subset of the data at a time, we significantly reduce the initial load time and memory usage, resulting in a faster and more efficient user experience. This is closely tied to the concept of lazy loading, where resources are loaded on-demand, further contributing to the application’s performance optimization and improved responsiveness.
+
+- Price History Page:
+  Utility Functions: Recognizing the need for reusable code, I created a ‘utils’ folder to house all utility functions that can be shared across various components, promoting clean coding practices.
+  Backend Assumption: Although the backend consistently returns the same result regardless of the listingId provided, I have implemented front-end logic to handle dynamic data, ensuring the application is ready for future backend updates.
+  Data Validation and Security Measures: In alignment with best security practices, I introduced an additional layer of data validation, meticulously verifying that the listingId is indeed a numerical value. This not only fortifies the application against potential errors but also serves as a safeguard, ensuring that only valid and expected data types are processed. Furthermore, to mitigate the risk of injection attacks, I employed the encodeURI function, adding an extra layer of security to our data handling procedures.
+
 
 ## Questions
 
@@ -42,7 +73,7 @@ Security: Security has been a top priority, with measures in place to mitigate c
 
 Error Handling and Logging: Comprehensive error handling and logging are in place to catch and diagnose issues as they arise. I’ve used try...catch blocks where applicable, and console.log and console.error statements are utilized for debugging purposes. These logs will be replaced with a more robust logging system in production to centralize error reporting.
 
-Responsive Design: Make sure the application provides a good user experience on various devices and screen sizes. I tested on differents screen, adapt the css accordingly
+Responsive Design: Make sure the application provides a good user experience on various devices and screen sizes. I tested on different screens, adapt the css accordingly
 
 Environment Configuration: Ensure that environment-specific configurations are set up correctly, such as API endpoints, feature toggles, etc. I put the environnement variables in .env, then it would be better to secure this parameters and also depend on the environnement set it up
 
@@ -54,7 +85,7 @@ Documentation: With additional time at my disposal, I would strive to create a m
 
 By addressing these aspects, I am confident that the application is robust, secure, and ready for a smooth deployment to production.
 
-I welcome any feedback you may have and eagerly anticipate your insights, as I am committed to continuously refining and improving the code."
+I welcome any feedback you may have and eagerly anticipate your insights, as I am committed to continuously refining and improving the code.
 
 - **How would you deploy your implementation?**
 
