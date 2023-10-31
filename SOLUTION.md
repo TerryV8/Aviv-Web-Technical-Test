@@ -93,6 +93,8 @@ Deploying a React TypeScript application entails a series of critical steps. In 
 
 10. Ensure that my application, especially if it 's a web application, is implementing proper security headers: Content Security Policy (CSP), HTTP Strict Transport Security (HSTS), X-Frame-Options, Referrer Policy, Cross-Origin Resource Sharing (CORS)
 
+11. Validate and sanitize more user inputs to protect my application against injection attacks such as SQL injection, NoSQL injection, and others.
+
 - **If you had to implement the same application from scratch, what would you do differently?**
 
 The folder structure of your React TypeScript project seems to be already well-organized and follows good practices for separation of concerns. However, there can be ways to improve and tailor the architecture of the project. Below are some suggestions to consider:
