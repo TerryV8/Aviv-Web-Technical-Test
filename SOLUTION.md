@@ -37,7 +37,6 @@ Considering my candidacy for the React-based Front End Developer position, I wou
   Backend Assumption: Although the backend consistently returns the same result regardless of the listingId provided, I have implemented front-end logic to handle dynamic data, ensuring the application is ready for future backend updates.
   Data Validation and Security Measures: In alignment with best security practices, I introduced an additional layer of data validation, meticulously verifying that the listingId is indeed a numerical value. This not only fortifies the application against potential errors but also serves as a safeguard, ensuring that only valid and expected data types are processed. Furthermore, to mitigate the risk of injection attacks, I employed the encodeURI function, adding an extra layer of security to our data handling procedures.
 
-
 ## Questions
 
 This section contains additional questions your expected to answer before the debrief interview.
@@ -67,9 +66,7 @@ In this project, I have executed the ESLint command using npm run lint:check to 
 
 Performance Optimization: Various performance optimization strategies have been implemented. Also, I had Pagination to efficiently load and render data, ensuring that the application remains fast even as the dataset grows. While lazy loading isn’t currently implemented, it's certainly on the radar for future enhancements, particularly if the number of images or heavy components increases.
 
-Security: Address security concerns, such as protecting against cross-site scripting (XSS), ensuring secure data transmission, and handling user authentication and authorization properly. I add encodeURIComponent to secure the argument listindId send in parameter, avoiding any injection. Also, if the url path is not one identify, i send a page error and a message telling that the url path is not good.
-
-Security: Security has been a top priority, with measures in place to mitigate common web vulnerabilities such as XSS. User inputs are sanitized, and secure data transmission is ensured. For example, encodeURIComponent is used to secure URL parameters. Additionally, unauthorized URL paths are handled gracefully, providing users with an error page and a clear message.
+Security: Address security concerns to mitigate common web vulnerabilities such as cross-site scripting (XSS), ensuring secure data transmission, and handling user authentication and authorization properly. I add encodeURIComponent of listingId to secure URL parameters. Additionally, unauthorized URL paths are handled gracefully, providing users with an error page and a clear message.
 
 Error Handling and Logging: Comprehensive error handling and logging are in place to catch and diagnose issues as they arise. I’ve used try...catch blocks where applicable, and console.log and console.error statements are utilized for debugging purposes. These logs will be replaced with a more robust logging system in production to centralize error reporting.
 
