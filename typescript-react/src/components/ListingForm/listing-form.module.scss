@@ -18,13 +18,35 @@
     display: inline-block;
     width: 100%;
     padding: $space-s;
-    margin-bottom: $space-s;
+    font-family: Arial;
+    font-size: 15px;
+  }
+
+  &__input-group-building-type {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3px;
+  }
+
+  &__input-group {
+    // display: flex;
+    align-items: center;
   }
 
   &__select {
     display: inline-block;
     padding: $space-s;
     margin-left: $space-s;
+  }
+
+  &__select-building-type {
+    display: inline-block;
+    padding: $space-s;
+    margin-bottom: $space-xs;
+    margin-right: 0px;
+    font-size: 15px;
   }
 
   &__button {
@@ -41,5 +63,18 @@
         background-color: darken($primary-70, 5%);
       }
     }
+  }
+
+  &__label {
+    font-weight: 500;
+    margin-top: 3px;
+  }
+
+  &__select-for-building-type {
+    float: right;
+  }
+
+  &__error {
+    color: red;
   }
 }
