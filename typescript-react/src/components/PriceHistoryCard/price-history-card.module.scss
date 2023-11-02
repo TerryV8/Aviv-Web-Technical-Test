@@ -1,7 +1,8 @@
 @use '@styles/variables' as *;
 
 .container {
-  margin: $space-xl auto;
+  // margin: $space-xl auto;
+  margin: $space-s auto;
   align-items: baseline;
   border: 1px solid $neutral-1;
   border-radius: 4px;
@@ -17,7 +18,8 @@
   border: 1px solid $neutral-1;
   border-radius: 4px;
   grid-template-columns: 100%;
-  margin-bottom: $space-m;
+  // margin-bottom: $space-m;
+  margin-bottom: $space-s;
   padding: $space-l;
 }
 
