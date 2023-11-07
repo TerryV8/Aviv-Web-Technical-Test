@@ -7,45 +7,44 @@ export const validateListingForm = (formData: FormData) => {
     validationErrors.name = 'Name is required';
 
   if (
-    String(formData.latest_price_eur) === '' ||
     formData.latest_price_eur === null ||
     formData.latest_price_eur === undefined ||
-    typeof Number(formData.latest_price_eur) !== 'number' ||
-    isNaN(formData.latest_price_eur) ||
-    formData.latest_price_eur < 0
+    String(formData.latest_price_eur) === '' ||
+    isNaN(Number(formData.latest_price_eur)) ||
+    Number(formData.latest_price_eur) < 0
   )
     validationErrors.latest_price_eur =
       'Price must be equal to or greater than 0';
 
   if (
-    String(formData.surface_area_m2) === '' ||
     formData.surface_area_m2 === null ||
     formData.surface_area_m2 === undefined ||
+    String(formData.surface_area_m2) === '' ||
     typeof Number(formData.surface_area_m2) !== 'number' ||
-    isNaN(formData.surface_area_m2) ||
-    formData.surface_area_m2 < 0
+    isNaN(Number(formData.surface_area_m2)) ||
+    Number(formData.surface_area_m2) < 0
   )
     validationErrors.surface_area_m2 =
       'Surface area must be equal to or greater than 0';
 
   if (
-    String(formData.rooms_count) === '' ||
     formData.rooms_count === null ||
     formData.rooms_count === undefined ||
+    String(formData.rooms_count) === '' ||
     typeof Number(formData.rooms_count) !== 'number' ||
-    isNaN(formData.rooms_count) ||
-    formData.rooms_count < 1
+    isNaN(Number(formData.rooms_count)) ||
+    Number(formData.rooms_count) < 1
   )
     validationErrors.rooms_count =
       'Number of rooms must be equal to or greater than 1';
 
   if (
-    String(formData.bedrooms_count) === '' ||
     formData.bedrooms_count === null ||
     formData.bedrooms_count === undefined ||
+    String(formData.bedrooms_count) === '' ||
     typeof Number(formData.bedrooms_count) !== 'number' ||
-    isNaN(formData.bedrooms_count) ||
-    formData.bedrooms_count < 0
+    isNaN(Number(formData.bedrooms_count)) ||
+    Number(formData.bedrooms_count) < 0
   )
     validationErrors.bedrooms_count =
       'Number of bedrooms must be equal to or greater than 0';

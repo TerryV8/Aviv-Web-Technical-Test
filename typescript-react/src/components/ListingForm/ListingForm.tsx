@@ -4,6 +4,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
+// @ts-ignore
 import PhoneInput from 'react-phone-input-2';
 import 'react-toastify/dist/ReactToastify.css';
 import 'react-phone-input-2/lib/style.css';
@@ -339,7 +340,7 @@ const ListingForm: React.FC<ListingFormProps> = ({ onListingAdded }) => {
             <PhoneInput
               country={'fr'}
               value={formData.contact_phone_number}
-              onChange={(value, country) => {
+              onChange={(value: string, country: string) => {
                 setFormData({
                   ...formData,
                   contact_phone_number: '+' + value,
